@@ -1,0 +1,22 @@
+Goals Document
+Short-Term Goals are anything that should be completed in less than a weeks time. 
+Proof of Concept Goals are goals that should be completed by submission on July 22nd at 12pm.
+Long-Term Goals are items that would be completed given a complete implementation of the application.
+
+
+
+Short-Term Goals:
+  Create a UX that provides 18-23 year olds a simple and intuitive design, such that reporting cases and non-personal information sharing is efficient.
+  
+
+
+
+Proof of Concept Goals:
+  Provide a Database Design that shows the expectations as to what the database might resemble and what information is required.
+  
+
+
+Long-Term Goals:
+  Provide a solution that can notify close contact individuals within 2 hours of a positive test result being notified to the University.
+  Deployment of the application with a University and Student view, such that private information is separated as expected and the University can quickly recognize patterns of transmission and identify the source of the infection.
+  
