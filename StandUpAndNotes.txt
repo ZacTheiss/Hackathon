@@ -2,7 +2,8 @@ July 15th Stand Up:
 Decisions Made:
   Mobile Application - Allows for easier Location tracking
 To Do:
-  Front-End Start - General Idea and Approach 
+  Front-End Start - General Idea and Approach (Cross-Platform, C#, React/Anguliar, Web-Dev (Xamarin, Flutter/Dart)
+      https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin
   Backend Idea Generation - Type of DB (SQL, NoSQL, etc), DB Structure, Data required
   Management - Goal Document, README start, Short-Term, PoC Goals, Long-Term Goals
   
@@ -15,8 +16,9 @@ Questions:
 
 General Notes:
   Focus on one University
-  
-
+  Why and How this is a good solution
+  Focus on communication and teamwork
+  Focus on the goals of the project and the wants
 
 
 
