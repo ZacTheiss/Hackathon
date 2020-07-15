@@ -1,5 +1,16 @@
-Goals Document
+July 15th Stand Up:
+Decisions Made:
+  Mobile Application - Allows for easier Location tracking
+To Do:
+  Front-End Start - General Idea and Approach 
+  Backend Idea Generation - Type of DB (SQL, NoSQL, etc), DB Structure, Data required
+  Management - Goal Document, README start, Short-Term, PoC Goals, Long-Term Goals
+  
+Questions:
+  What assumptions are possible? (Checking for student information, classes, etc.)
+      Answer: 
+  How can notifications work for positive results, can we use the app without giving information? (Text: The appropriate University personnel would then notify impacted contacts, advise them to isolate themselves, and maintain     social distance from others.)
+      Answer: 
 
-
-CDC Quote:
-Based on our current knowledge, a close contact is someone who was within 6 feet of an infected person for at least 15 minutes starting from 48 hours before illness onset until the time the patient is isolated. They should stay home, maintain social distancing, and self-monitor until 14 days from the last date of exposure.
+CDC Quote - For Close Contact Definition:
+"Based on our current knowledge, a close contact is someone who was within 6 feet of an infected person for at least 15 minutes starting from 48 hours before illness onset until the time the patient is isolated. They should stay home, maintain social distancing, and self-monitor until 14 days from the last date of exposure."
