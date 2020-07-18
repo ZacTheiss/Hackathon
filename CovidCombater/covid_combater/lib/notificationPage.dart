@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'notificationDetailPage.dart'; //Used for the push to the detail page
 
 class NotificationPage extends StatelessWidget {
   @override
@@ -19,3 +20,6 @@ class NotificationPage extends StatelessWidget {
     );
   }
 }
+
+//This will be code for the Contact with COVID-19 button
+// onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationDetailPage())))),

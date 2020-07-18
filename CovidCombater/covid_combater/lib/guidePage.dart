@@ -19,3 +19,6 @@ class GuidePage extends StatelessWidget {
     );
   }
 }
+// DO WE WANT to have links to the 3 CDC recommendations?
+// If we want it to opena webpage, here is a link
+// https://pub.dev/packages/url_launcher
