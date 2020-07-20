@@ -20,3 +20,7 @@ class QuestionnairePage extends StatelessWidget {
     );
   }
 }
+
+//This document will need a database connection to save what the enter for contact
+// Feel free to test the code, then we can merge branches or comment the DB connection
+// and I can grab and insert. Up to you, I have not used merging much
