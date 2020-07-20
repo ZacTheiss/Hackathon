@@ -45,6 +45,28 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
               ),
             ),
             Container(
+              child: CheckboxListTile(
+                title: Text('Fitness Center'),
+                value: _value,
+                onChanged: (newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            ),
+            Container(
+              child: CheckboxListTile(
+                title: Text('The Station'),
+                value: _value,
+                onChanged: (newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              ),
+            ),
+            Container(
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),

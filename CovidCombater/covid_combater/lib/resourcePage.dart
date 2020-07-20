@@ -1,21 +1,47 @@
 import 'package:flutter/material.dart';
-import 'notificationDetailPage.dart'; //Used for the push to the detail page
+import 'package:grouped_list/grouped_list.dart';
+
+List _elements = [
+  {'name': 'Cough', 'group': 'Symptoms'},
+  {'name': 'Shortness of breath', 'group': 'Symptoms'},
+  {'name': 'Fever', 'group': 'Symptoms'},
+  {'name': 'Mosaic Medical Center - Maryville', 'group': 'Testing Locations'},
+  {'name': 'Mosaic Specialty Clinic', 'group': 'Testing Locations'},
+  {'name': 'cdc.gov', 'group': 'Resources'},
+];
 
 class ResourcePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Text(
-                'This is the resource page',
-              ),
-            )
-          ],
+      appBar: AppBar(
+        title: Text('Next Steps'),
+      ),
+      body: GroupedListView<dynamic, String>(
+        groupBy: (element) => element['group'],
+        elements: _elements,
+        useStickyGroupSeparators: true,
+        groupSeparatorBuilder: (String value) => Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            value,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
         ),
+        itemBuilder: (c, element) {
+          return Card(
+            elevation: 8.0,
+            margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+            child: Container(
+              child: ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                title: Text(element['name']),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

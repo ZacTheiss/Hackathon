@@ -13,9 +13,45 @@ class GuidePage extends StatelessWidget {
           children: <Widget>[
             Container(
               child: Text(
-                'This is the guide page',
+                'CDC Recommendations',
               ),
-            )
+            ),
+            Card(
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                child: ExpansionTile(
+                  title: Text('Wash Your Hands'),
+                  children: <Widget>[
+                    Text('Wash your hands for at least 20 seconds.'),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                child: ExpansionTile(
+                  title: Text('Wear a Mask'),
+                  children: <Widget>[
+                    Text('Wearing a mask protects others in the event that you are sick.'),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                child: ExpansionTile(
+                  title: Text('Practice Social Distancing'),
+                  children: <Widget>[
+                    Text('Stand at least 6ft from others.'),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

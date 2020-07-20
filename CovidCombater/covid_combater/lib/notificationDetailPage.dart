@@ -1,23 +1,53 @@
 import 'package:flutter/material.dart';
-import 'notificationDetailPage.dart'; //Used for the push to the detail page
+import 'contact.dart';
 
 class NotificationDetailPage extends StatelessWidget {
+  final Contact contactInfo;
+
+  NotificationDetailPage({Key key, @required this.contactInfo})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Text(
-                'This is the notification detail page',
-              ),
-            )
-          ],
+        appBar: AppBar(
+          title: Text(contactInfo.name),
         ),
-      ),
-    );
+        body: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                  contactInfo.location,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                  child: Text(
+                contactInfo.date,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              )),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                  child: Text(
+                contactInfo.time,
+              )),
+            ),
+          ],
+        ));
   }
 }
 
