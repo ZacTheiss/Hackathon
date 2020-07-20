@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'questionnairePage.dart';
-//Assuming this to be the 'Next Steps' Page - If wrong, add note to change
-import 'resourcePage.dart'; //Found in the Been in Contact with a COVID patient.
+import 'resourcePage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,13 +8,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-              child: Text(
-                'This is the home page',
-              ),
-            )
+                child: RaisedButton(
+                    child: Text('I have tested positive for COVID-19'),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => QuestionnairePage())))),
+            Container(
+                child: RaisedButton(
+                    child: Text('I have been in contact with someone who has tested postiive for COVID-19'),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ResourcePage()))))
           ],
         ),
       ),
