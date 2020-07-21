@@ -12,7 +12,10 @@ class LoginPage extends StatelessWidget {
             Container(
               child: Text(
                 'COVID Combater',
-                style: TextStyle(color: Colors.black, fontSize: 30.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             Container(
@@ -36,7 +39,12 @@ class LoginPage extends StatelessWidget {
             // The onPressed must have a () before the navigator because the onPressed
             // accepts void as a function, but the Navigator.push returns a Future.
             // Type mismatch requires the () to hide the return value.
-            Container(height: 50, child: RaisedButton(child: Text('Login'), onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => TabView())))),
+            Container(
+                height: 50,
+                child: RaisedButton(
+                    child: Text('Login'),
+                    onPressed: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => TabView())))),
           ],
         ),
       ),
