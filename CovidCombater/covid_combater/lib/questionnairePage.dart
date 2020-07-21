@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'confirmationPage.dart';
+import 'dart:async';
 
 class QuestionnairePage extends StatefulWidget {
   @override
@@ -12,11 +13,40 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
   bool _value3 = false;
   bool _value4 = false;
   bool _value5 = false;
-  String _dateTime1 = '';
-  String _dateTime2 = '';
-  String _dateTime3 = '';
-  String _dateTime4 = '';
-  String _dateTime5 = '';
+  DateTime _dateTime1 = DateTime.now();
+  DateTime _dateTime2 = DateTime.now();
+  DateTime _dateTime3 = DateTime.now();
+  DateTime _dateTime4 = DateTime.now();
+  DateTime _dateTime5 = DateTime.now();
+
+  Future<DateTime> _selectDateTime(
+      BuildContext context, DateTime dt, int numb) async {
+    final DateTime picked = await showDatePicker(
+        context: context,
+        initialDate: dt,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != dt) if (numb == 1)
+      setState(() {
+        _dateTime1 = picked;
+      });
+    else if (numb == 2)
+      setState(() {
+        _dateTime2 = picked;
+      });
+    else if (numb == 3)
+      setState(() {
+        _dateTime3 = picked;
+      });
+    else if (numb == 4)
+      setState(() {
+        _dateTime4 = picked;
+      });
+    else
+      setState(() {
+        _dateTime5 = picked;
+      });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,20 +84,15 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
                   setState(() {
                     _value1 = newValue;
                   });
+                  if (_value1) {
+                    _selectDateTime(context, _dateTime1, 1);
+                  }
                 },
               ),
             ),
             Visibility(
               visible: _value1,
-              child: TextField(
-                onChanged: (String value) {
-                  _dateTime1 = value;
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Date and Time',
-                ),
-              ),
+              child: Text("${_dateTime1.toLocal()}".split(' ')[0]),
             ),
             Container(
               child: CheckboxListTile(
@@ -77,20 +102,15 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
                   setState(() {
                     _value2 = newValue;
                   });
+                  if (_value2) {
+                    _selectDateTime(context, _dateTime2, 2);
+                  }
                 },
               ),
             ),
             Visibility(
               visible: _value2,
-              child: TextField(
-                onChanged: (String value) {
-                  _dateTime2 = value;
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Date and Time',
-                ),
-              ),
+              child: Text("${_dateTime2.toLocal()}".split(' ')[0]),
             ),
             Container(
               child: CheckboxListTile(
@@ -100,20 +120,15 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
                   setState(() {
                     _value3 = newValue;
                   });
+                  if (_value3) {
+                    _selectDateTime(context, _dateTime3, 3);
+                  }
                 },
               ),
             ),
             Visibility(
               visible: _value3,
-              child: TextField(
-                onChanged: (String value) {
-                  _dateTime3 = value;
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Date and Time',
-                ),
-              ),
+              child: Text("${_dateTime3.toLocal()}".split(' ')[0]),
             ),
             Container(
               child: CheckboxListTile(
@@ -123,20 +138,15 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
                   setState(() {
                     _value4 = newValue;
                   });
+                  if (_value4) {
+                    _selectDateTime(context, _dateTime4, 4);
+                  }
                 },
               ),
             ),
             Visibility(
               visible: _value4,
-              child: TextField(
-                onChanged: (String value) {
-                  _dateTime4 = value;
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Date and Time',
-                ),
-              ),
+              child: Text("${_dateTime4.toLocal()}".split(' ')[0]),
             ),
             Container(
               child: CheckboxListTile(
@@ -146,20 +156,15 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
                   setState(() {
                     _value5 = newValue;
                   });
+                  if (_value5) {
+                    _selectDateTime(context, _dateTime5, 5);
+                  }
                 },
               ),
             ),
             Visibility(
               visible: _value5,
-              child: TextField(
-                onChanged: (String value) {
-                  _dateTime5 = value;
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Location, Date, and Time',
-                ),
-              ),
+              child: Text("${_dateTime5.toLocal()}".split(' ')[0]),
             ),
             Container(
               child: RaisedButton(
