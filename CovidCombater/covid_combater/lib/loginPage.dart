@@ -21,12 +21,7 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 30.0,
-<<<<<<< HEAD
                     fontWeight: FontWeight.bold),
-=======
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Open Sans'),
->>>>>>> 417a2373804147d9a21b559c83d5ebaea1180b2d
               ),
             ),
             Padding(
@@ -118,15 +113,12 @@ class LoginPage extends StatelessWidget {
             // The onPressed must have a () before the navigator because the onPressed
             // accepts void as a function, but the Navigator.push returns a Future.
             // Type mismatch requires the () to hide the return value.
-<<<<<<< HEAD
             Container(
                 height: 50,
                 child: RaisedButton(
                     child: Text('Login'),
                     onPressed: () => Navigator.push(context,
                         MaterialPageRoute(builder: (context) => TabView())))),
-=======
->>>>>>> 417a2373804147d9a21b559c83d5ebaea1180b2d
           ],
         ),
       ),

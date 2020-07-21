@@ -3,6 +3,15 @@ import 'notificationDetailPage.dart'; //Used for the push to the detail page
 import 'package:mongo_dart/mongo_dart.dart';
 import 'package:grouped_list/grouped_list.dart';
 
+List _elements = [
+  {'name': 'Cough', 'group': 'Symptoms'},
+  {'name': 'Shortness of breath', 'group': 'Symptoms'},
+  {'name': 'Fever', 'group': 'Symptoms'},
+  {'name': 'Mosaic Medical Center - Maryville', 'group': 'Testing Locations'},
+  {'name': 'Mosaic Specialty Clinic', 'group': 'Testing Locations'},
+  {'name': 'cdc.gov', 'group': 'Resources'},
+];
+
 class ResourcePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

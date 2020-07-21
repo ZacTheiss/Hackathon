@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'questionnairePage.dart';
 import 'resourcePage.dart';
-import 'package:mongo_dart/mongo_dart.dart';
+//import 'package:mongo_dart/mongo_dart.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,6 +15,14 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
+              child: Text(
+                "Please select one:",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 100.0,
               child: RaisedButton(
                 child: Text('I have tested positive for COVID-19'),
                 onPressed: () => Navigator.push(
@@ -23,18 +31,22 @@ class HomePage extends StatelessWidget {
                         builder: (context) => QuestionnairePage())),
               ),
             ),
-            Container(
+            SizedBox(
+              width: double.infinity,
+              height: 100.0,
               child: RaisedButton(
                   child: Text(
-                      'I have been in contact with someone who has tested postiive for COVID-19'),
+                    'I have been in contact with someone who has tested postiive for COVID-19',
+                    textAlign: TextAlign.center,
+                  ),
                   onPressed: () async {
-                    Db db = Db('mongodb://localhost:27017/test');
-                    await db.open();
-                    DbCollection coll = db.collection('people');
+                    // Db db = Db('mongodb://localhost:27017/test');
+                    //await db.open();
+                    //DbCollection coll = db.collection('people');
 
-                    await coll.update(await coll.findOne(where.eq('id', 101)), {
-                      r'$set': {'positiveTest': true}
-                    });
+                    //await coll.update(await coll.findOne(where.eq('id', 101)), {
+                    //r'$set': {'positiveTest': true}
+                    //});
                     Navigator.push(
                         context,
                         MaterialPageRoute(

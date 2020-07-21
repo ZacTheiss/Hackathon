@@ -8,7 +8,7 @@ class ConfirmationPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Confirmation'),
       ),
-      body: Container(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

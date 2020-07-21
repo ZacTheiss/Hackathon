@@ -7,7 +7,16 @@ class QuestionnairePage extends StatefulWidget {
 }
 
 class _QuestionnairePageState extends State<QuestionnairePage> {
-  bool _value = true;
+  bool _value1 = false;
+  bool _value2 = false;
+  bool _value3 = false;
+  bool _value4 = false;
+  bool _value5 = false;
+  String _dateTime1 = '';
+  String _dateTime2 = '';
+  String _dateTime3 = '';
+  String _dateTime4 = '';
+  String _dateTime5 = '';
 
   @override
   Widget build(BuildContext context) {
@@ -20,57 +29,123 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Text("Which of the following buildings have you been in?"),
+              child: Text(
+                "Up to 48 hours before your test and until now, which buildings have you been in for a period longer than 15 minutes (exclude your classes)",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             Container(
               child: CheckboxListTile(
                 title: Text('Student Union'),
-                value: _value,
+                value: _value1,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _value1 = newValue;
                   });
                 },
+              ),
+            ),
+            Visibility(
+              visible: _value1,
+              child: TextField(
+                onChanged: (String value) {
+                  _dateTime1 = value;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Date and Time',
+                ),
               ),
             ),
             Container(
               child: CheckboxListTile(
                 title: Text('Library'),
-                value: _value,
+                value: _value2,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _value2 = newValue;
                   });
                 },
+              ),
+            ),
+            Visibility(
+              visible: _value2,
+              child: TextField(
+                onChanged: (String value) {
+                  _dateTime2 = value;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Date and Time',
+                ),
               ),
             ),
             Container(
               child: CheckboxListTile(
                 title: Text('Fitness Center'),
-                value: _value,
+                value: _value3,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _value3 = newValue;
                   });
                 },
+              ),
+            ),
+            Visibility(
+              visible: _value3,
+              child: TextField(
+                onChanged: (String value) {
+                  _dateTime3 = value;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Date and Time',
+                ),
               ),
             ),
             Container(
               child: CheckboxListTile(
                 title: Text('The Station'),
-                value: _value,
+                value: _value4,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _value4 = newValue;
                   });
                 },
               ),
             ),
-            Container(
+            Visibility(
+              visible: _value4,
               child: TextField(
+                onChanged: (String value) {
+                  _dateTime4 = value;
+                },
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Other',
+                  labelText: 'Date and Time',
+                ),
+              ),
+            ),
+            Container(
+              child: CheckboxListTile(
+                title: Text('Other'),
+                value: _value5,
+                onChanged: (newValue) {
+                  setState(() {
+                    _value5 = newValue;
+                  });
+                },
+              ),
+            ),
+            Visibility(
+              visible: _value5,
+              child: TextField(
+                onChanged: (String value) {
+                  _dateTime5 = value;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Location, Date, and Time',
                 ),
               ),
             ),
