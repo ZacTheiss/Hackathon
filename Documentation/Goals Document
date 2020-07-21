@@ -1,0 +1,24 @@
+Goals Document
+Short-Term Goals are anything that should be completed in less than a weeks time. 
+Proof of Concept Goals are goals that should be completed by submission on July 22nd at 12pm.
+Long-Term Goals are items that would be completed given a complete implementation of the application.
+
+
+
+Short-Term Goals:
+  Create a UX that provides 18-23 year olds a simple and intuitive design, such that reporting cases and non-personal information sharing is efficient.
+  
+
+
+
+Proof of Concept Goals:
+  Provide a Database Design that shows the expectations as to what the database might resemble and what information is required.
+  
+
+
+Long-Term Goals:
+  Provide a solution that can notify close contact individuals within 2 hours of a positive test result being notified to the University.
+  Deployment of the application with a University and Student view, such that private information is separated as expected and the University can quickly recognize patterns of transmission and identify the source of the infection.
+  
+Long-term Thought:
+The University Officials have an administrator aspect that allows them to send notifications to select or all students to inform them of CDC social distancing guidelines in the case that the individual came into contact with a positive COVID patient. They will also have access to a full list of student IDs that have been confirmed cases of COVID allowing them to reach out to the student and reach out to classmates that might have been exposed. Using the University class information, the administrator can notify all individuals in the student's classes that they need to social distance and be aware of CDC guidelines. After 2 days, the administrator can reach back out to these students and ask if there have been any COVID symptoms and check if new individuals have tested positive as well. The POC is designed to be a background application until it is needed to send mass information and to assist in preventing the spread of COVID. Administrators are given access to pertinent data that can be used to prevent a spread of COVID while following CDC and HIPAA guidelines.
