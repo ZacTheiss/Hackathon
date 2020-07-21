@@ -6,7 +6,18 @@ class ConfirmationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Confirmation'),
+        centerTitle: true,
+        title: Text('Confirmation', style: TextStyle(fontFamily: 'Open Sans')),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                Color.fromRGBO(0, 103, 71, 1),
+                Color.fromRGBO(4, 63, 45, 1),
+              ])),
+        ),
       ),
       body: Center(
         child: Column(

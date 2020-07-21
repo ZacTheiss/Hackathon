@@ -24,18 +24,19 @@ class _TabViewState extends State<TabView> {
       home: Scaffold(
         body: _widgets[index],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color.fromRGBO(0, 103, 71, 1),
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.white,
           currentIndex: index,
           onTap: tapped,
           items: [
             BottomNavigationBarItem(
-                icon: new Icon(Icons.home), 
-                title: Text('Home')),
+                icon: new Icon(Icons.home), title: Text('Home', style: TextStyle(fontFamily: 'Open Sans'))),
             BottomNavigationBarItem(
-                icon: new Icon(Icons.info), 
-                title: Text('Guide')),
+                icon: new Icon(Icons.info), title: Text('Guide', style: TextStyle(fontFamily: 'Open Sans'))),
             BottomNavigationBarItem(
                 icon: new Icon(Icons.notifications),
-                title: Text('Notifications')),
+                title: Text('Notifications', style: TextStyle(fontFamily: 'Open Sans'))),
           ],
         ),
       ),
