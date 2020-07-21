@@ -76,12 +76,17 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
             ),
             Container(
               child: RaisedButton(
-                child: Text('Submit'),
-                onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ConfirmationPage())),
-              ),
+                  child: Text('Submit'),
+                  onPressed: () async {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ConfirmationPage()));
+                  } //=> Navigator.push(
+                  //context,
+                  //MaterialPageRoute(
+                  //builder: (context) => ConfirmationPage())),
+                  ),
             ),
           ],
         ),

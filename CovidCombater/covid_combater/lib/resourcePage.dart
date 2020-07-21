@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'notificationDetailPage.dart'; //Used for the push to the detail page
 import 'package:mongo_dart/mongo_dart.dart';
+import 'package:grouped_list/grouped_list.dart';
 
 class ResourcePage extends StatelessWidget {
   @override
