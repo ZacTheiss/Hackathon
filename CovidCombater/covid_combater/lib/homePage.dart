@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'questionnairePage.dart';
 import 'resourcePage.dart';
+//import 'package:mongo_dart/mongo_dart.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -25,11 +26,21 @@ class HomePage extends StatelessWidget {
       backgroundColor: Color.fromRGBO(161, 161, 161, 1),
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-              height: 80,
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.fromLTRB(0, 50, 0, 30),
+              child: Text(
+                "Please select one:",
+                style: TextStyle(
+                    fontFamily: 'Open Sans',
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w400),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 50, 0, 100),
+              padding: EdgeInsets.all(5.0),
+              height: 100,
               child: RaisedButton(
                 onPressed: () => Navigator.push(
                     context,
@@ -37,9 +48,9 @@ class HomePage extends StatelessWidget {
                         builder: (context) => QuestionnairePage())),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
-                padding: const EdgeInsets.all(0.0),
+                padding: EdgeInsets.all(0.0),
                 child: Ink(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Color.fromRGBO(0, 103, 71, 1),
                       Color.fromRGBO(4, 63, 45, 1),
@@ -64,16 +75,17 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              height: 80,
-              padding: EdgeInsets.all(10.0),
+              height: 100,
+              margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+              padding: EdgeInsets.all(5.0),
               child: RaisedButton(
                 onPressed: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ResourcePage())),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
-                padding: const EdgeInsets.all(0.0),
+                padding: EdgeInsets.all(0.0),
                 child: Ink(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Color.fromRGBO(0, 103, 71, 1),
                       Color.fromRGBO(4, 63, 45, 1),
