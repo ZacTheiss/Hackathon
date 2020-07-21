@@ -116,6 +116,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   glob:
     dependency: transitive
     description:
@@ -158,6 +159,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.8+3"
+=======
+  grouped_list:
+    dependency: "direct main"
+    description:
+      name: grouped_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.3"
+>>>>>>> 0f0cfb152b46d565e8a674670c0ea5eb9a44e4eb
   image:
     dependency: transitive
     description:
