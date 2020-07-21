@@ -19,38 +19,40 @@ class _NotificationPageState extends State<NotificationPage> {
         title: Text('Notifications', style: TextStyle(fontFamily: 'Open Sans')),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
                 Color.fromRGBO(0, 103, 71, 1),
                 Color.fromRGBO(4, 63, 45, 1),
-              ])),
+              ],
+            ),
+          ),
         ),
       ),
       backgroundColor: Color.fromRGBO(161, 161, 161, 1),
       body: Container(
         child: ListView.separated(
-        itemBuilder: (context, index) {
-          var contactInfo = contact[index];
-          return ListTile(
-              title: Text(contactInfo.name),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          NotificationDetailPage(contactInfo: contact[index]),
-                    ));
-              });
-        },
-        separatorBuilder: (context, index) {
-          return Divider(
-            color: Colors.black,
-            height: 2.0,
-          );
-        },
-        itemCount: contact.length),
+            itemBuilder: (context, index) {
+              var contactInfo = contact[index];
+              return ListTile(
+                  title: Text(contactInfo.date, style: TextStyle(fontFamily: 'Open Sans', color: Colors.black),),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NotificationDetailPage(
+                              contactInfo: contact[index]),
+                        ));
+                  });
+            },
+            separatorBuilder: (context, index) {
+              return Divider(
+                color: Colors.black,
+                height: 2.0,
+              );
+            },
+            itemCount: contact.length),
       ),
     );
   }

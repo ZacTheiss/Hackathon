@@ -9,59 +9,187 @@ class GuidePage extends StatelessWidget {
         title: Text('Guide', style: TextStyle(fontFamily: 'Open Sans')),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
                 Color.fromRGBO(0, 103, 71, 1),
                 Color.fromRGBO(4, 63, 45, 1),
-              ])),
+              ],
+            ),
+          ),
         ),
       ),
       backgroundColor: Color.fromRGBO(161, 161, 161, 1),
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
+              padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
               child: Text(
                 'CDC Recommendations',
+                style: TextStyle(
+                    fontFamily: 'Open Sans',
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w500),
               ),
             ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.only(
-                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
-                child: ExpansionTile(
-                  title: Text('Wash Your Hands'),
-                  children: <Widget>[
-                    Text('Wash your hands for at least 20 seconds.'),
-                  ],
-                ),
+            Container(
+              height: 120.0,
+              margin: const EdgeInsets.symmetric(
+                vertical: 16.0,
+                horizontal: 24.0,
+              ),
+              child: Stack(
+                children: <Widget>[
+                  Container(
+                    height: 124.0,
+                    margin: new EdgeInsets.only(left: 46.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 103, 71, 1),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(8.0),
+                      boxShadow: <BoxShadow>[
+                        BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 10.0,
+                            offset: Offset(0.0, 10.0))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    alignment: FractionalOffset.centerLeft,
+                    child: Image(
+                      image: AssetImage("images/handWashing.png"),
+                      height: 92.0,
+                      width: 92.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(height: 4.0),
+                        Text('Wash your hands',
+                            style: TextStyle(
+                                fontFamily: 'Open Sans',
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w300),
+                                textAlign: TextAlign.center,),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.only(
-                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
-                child: ExpansionTile(
-                  title: Text('Wear a Mask'),
-                  children: <Widget>[
-                    Text('Wearing a mask protects others in the event that you are sick.'),
-                  ],
-                ),
+            Container(
+              height: 120.0,
+              margin: const EdgeInsets.symmetric(
+                vertical: 16.0,
+                horizontal: 24.0,
+              ),
+              child: Stack(
+                children: <Widget>[
+                  Container(
+                    height: 124.0,
+                    margin: new EdgeInsets.only(left: 46.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 103, 71, 1),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(8.0),
+                      boxShadow: <BoxShadow>[
+                        BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 10.0,
+                            offset: Offset(0.0, 10.0))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    alignment: FractionalOffset.centerLeft,
+                    child: Image(
+                      image: AssetImage("images/mask.png"),
+                      height: 92.0,
+                      width: 92.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(height: 4.0),
+                        Text('Wear a mask',
+                            style: TextStyle(
+                                fontFamily: 'Open Sans',
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w300),
+                                textAlign: TextAlign.center,),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.only(
-                    top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
-                child: ExpansionTile(
-                  title: Text('Practice Social Distancing'),
-                  children: <Widget>[
-                    Text('Stand at least 6ft from others.'),
-                  ],
-                ),
+            Container(
+              height: 120.0,
+              margin: const EdgeInsets.symmetric(
+                vertical: 16.0,
+                horizontal: 24.0,
+              ),
+              child: Stack(
+                children: <Widget>[
+                  Container(
+                    height: 124.0,
+                    margin: new EdgeInsets.only(left: 46.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 103, 71, 1),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(8.0),
+                      boxShadow: <BoxShadow>[
+                        BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 10.0,
+                            offset: Offset(0.0, 10.0))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    alignment: FractionalOffset.centerLeft,
+                    child: Image(
+                      image: AssetImage("images/distancing.png"),
+                      height: 92.0,
+                      width: 92.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(height: 4.0),
+                        Text(
+                          'Practice social distancing',
+                          style: TextStyle(
+                              fontFamily: 'Open Sans',
+                              fontSize: 30,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

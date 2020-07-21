@@ -7,7 +7,10 @@ class QuestionnairePage extends StatefulWidget {
 }
 
 class _QuestionnairePageState extends State<QuestionnairePage> {
-  bool _value = true;
+  bool _unionValue = true;
+  bool _libraryValue = false;
+  bool _fitnessValue = false;
+  bool _stationValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,69 +35,122 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Text("Which of the following buildings have you been in?"),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+              child: Text("Which of the following buildings have you been in?",
+                  style: TextStyle(
+                      fontFamily: 'Open Sans',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  textAlign: TextAlign.center),
             ),
             Container(
               child: CheckboxListTile(
-                title: Text('Student Union'),
-                value: _value,
+                checkColor: Colors.white,
+                activeColor: Color.fromRGBO(0, 103, 71, 1),
+                title: Text('Student Union',
+                    style: TextStyle(
+                        fontFamily: 'Open Sans', color: Colors.black)),
+                value: _unionValue,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _unionValue = newValue;
                   });
                 },
               ),
             ),
             Container(
               child: CheckboxListTile(
-                title: Text('Library'),
-                value: _value,
+                checkColor: Colors.white,
+                activeColor: Color.fromRGBO(0, 103, 71, 1),
+                title: Text('Library',
+                    style: TextStyle(
+                        fontFamily: 'Open Sans', color: Colors.black)),
+                value: _libraryValue,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _libraryValue = newValue;
                   });
                 },
               ),
             ),
             Container(
               child: CheckboxListTile(
-                title: Text('Fitness Center'),
-                value: _value,
+                checkColor: Colors.white,
+                activeColor: Color.fromRGBO(0, 103, 71, 1),
+                title: Text('Fitness Center',
+                    style: TextStyle(
+                        fontFamily: 'Open Sans', color: Colors.black)),
+                value: _fitnessValue,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _fitnessValue = newValue;
                   });
                 },
               ),
             ),
             Container(
               child: CheckboxListTile(
-                title: Text('The Station'),
-                value: _value,
+                checkColor: Colors.white,
+                activeColor: Color.fromRGBO(0, 103, 71, 1),
+                title: Text('The Station',
+                    style: TextStyle(
+                        fontFamily: 'Open Sans', color: Colors.black)),
+                value: _stationValue,
                 onChanged: (newValue) {
                   setState(() {
-                    _value = newValue;
+                    _stationValue = newValue;
                   });
                 },
               ),
             ),
             Container(
+              padding: EdgeInsets.all(10.0),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Other',
+                  hintText: "Other",
+                  hintStyle:
+                      TextStyle(color: Colors.black, fontFamily: 'Open Sans'),
                 ),
               ),
             ),
             Container(
+              height: 80,
+              padding: EdgeInsets.all(10.0),
               child: RaisedButton(
-                child: Text('Submit'),
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => ConfirmationPage())),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                padding: const EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Color.fromRGBO(0, 103, 71, 1),
+                      Color.fromRGBO(4, 63, 45, 1),
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  child: Container(
+                    constraints: const BoxConstraints(
+                        minWidth: 88.0,
+                        minHeight: 36.0), // min sizes for Material buttons
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                          fontFamily: 'Open Sans',
+                          fontSize: 18.0,
+                          color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
