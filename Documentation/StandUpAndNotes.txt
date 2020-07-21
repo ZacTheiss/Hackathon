@@ -1,0 +1,42 @@
+July 15th Stand Up:
+Decisions Made:
+  Mobile Application - Allows for easier Location tracking
+To Do:
+  Front-End Start - General Idea and Approach (Cross-Platform, C#, React/Anguliar, Web-Dev (Xamarin, Flutter/Dart)
+      https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin
+  Backend Idea Generation - Type of DB (SQL, NoSQL, etc), DB Structure, Data required
+  Management - Goal Document, README start, Short-Term, PoC Goals, Long-Term Goals
+  
+Questions:
+  What assumptions are possible? (Checking for student information, classes, etc.)
+      Answer: Free to assume as we wish, Focus on one university as of now.
+  How can notifications work for positive results, can we use the app without giving information? (Text: The appropriate University personnel would then notify impacted contacts, advise them to isolate themselves, and maintain social distance from others.)
+      Answer: Notify Mgmt and Individuals
+
+
+General Notes:
+  Focus on one University
+  ******Why and How this is a good solution
+  Focus on communication and teamwork
+  Focus on the goals of the project and the wants
+
+Front-End Notes:
+  Questions to ask: do we want a CDC view and a student/teacher view? Or do we just need to track the students location and app is just for CDC members to find potentially infected students? I think we only work with the University.
+  How many views are we looking at essentially? How many pages with each view?
+  Provide front-end of resources for the student. Limited usage without active cases being pushed.
+  
+How and Why Notes:
+  I think it’s important we can state how and why our application is meeting the challenge assigned to us, so that when Marge asks us we have a solid “script” we can read from.  I think anything outside of that, like how far we get with our app is a bonus.  I know we have all really thought through this already before we even started coding, which was smart, but this will really solidify how we came together as a group to tackle the problem.
+  Agreed. 
+  Clarification, the How and Why are the How did we solve the problem and Why is it impactful/different?
+  Yeah to me the ‘how’ is how does our app meet the requirements set out for us.  The why is maybe why we chose to use the approach we took and why it might be better than other solutions
+
+
+
+This is a good example of showing COVID spreading with and without preventative measures.
+https://www.reddit.com/r/educationalgifs/comments/fjjlex/social_distancing_and_spreading_of_diseases/
+
+
+
+CDC Quote - For Close Contact Definition:
+"Based on our current knowledge, a close contact is someone who was within 6 feet of an infected person for at least 15 minutes starting from 48 hours before illness onset until the time the patient is isolated. They should stay home, maintain social distancing, and self-monitor until 14 days from the last date of exposure."
