@@ -89,21 +89,13 @@ class LoginPage extends StatelessWidget {
                         ]),
                       ),
                       child: Center(
-                        child: GestureDetector(
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => TabView(),
-                            ),
-                          ),
-                          child: Text(
-                            'Login',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Open Sans',
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w500),
-                          ),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Open Sans',
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),

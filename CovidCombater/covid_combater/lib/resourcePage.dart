@@ -15,8 +15,20 @@ class ResourcePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Steps'),
+        centerTitle: true,
+        title: Text('Next Steps', style: TextStyle(fontFamily: 'Open Sans')),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                Color.fromRGBO(0, 103, 71, 1),
+                Color.fromRGBO(4, 63, 45, 1),
+              ])),
+        ),
       ),
+      backgroundColor: Color.fromRGBO(161, 161, 161, 1),
       body: GroupedListView<dynamic, String>(
         groupBy: (element) => element['group'],
         elements: _elements,

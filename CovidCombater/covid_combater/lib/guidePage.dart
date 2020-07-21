@@ -5,8 +5,20 @@ class GuidePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Guide'),
+        centerTitle: true,
+        title: Text('Guide', style: TextStyle(fontFamily: 'Open Sans')),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                Color.fromRGBO(0, 103, 71, 1),
+                Color.fromRGBO(4, 63, 45, 1),
+              ])),
+        ),
       ),
+      backgroundColor: Color.fromRGBO(161, 161, 161, 1),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
